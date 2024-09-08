@@ -1,7 +1,9 @@
+import React from 'react'; // Add this line to import React module
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import NewNote from './NewNote';
+import { useLocalStorage } from './useLocalStorage';
 
 export type Note = {
   id: string;
@@ -30,7 +32,7 @@ export type Tag = {
 
 function App() {
   const [notes, setNotes] = useLocalStorage<RawNote[]>('NOTES', []);
-  const [tag, setTags] = useLocalStorage<Tag[]>('TAGS', []);
+  const [tags, setTags] = useLocalStorage<Tag[]>('TAGS', []);
 
   return (
     <Container className="my-4">
