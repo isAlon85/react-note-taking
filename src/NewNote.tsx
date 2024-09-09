@@ -1,5 +1,5 @@
-import React from 'react';
-import NoteForm from './NoteForm';
+import React from 'react'
+import NoteForm from './NoteForm'
 
 export default function NewNote() {
   return (
@@ -7,5 +7,5 @@ export default function NewNote() {
       <h1 className='mb-4'>New Note</h1>
       <NoteForm />
     </>
-  );
+  )
 }
