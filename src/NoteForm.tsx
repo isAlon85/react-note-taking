@@ -1,26 +1,26 @@
-import React from 'react';
-import { Button, Col, Form, Row, Stack } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import CreatableReactSelect from 'react-select/creatable';
-import { NoteData, Tag } from './App';
+import React from 'react'
+import { Button, Col, Form, Row, Stack } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import CreatableReactSelect from 'react-select/creatable'
+import { NoteData, Tag } from './App'
 
 type NoteFormProps = {
-  onSubmit: (data: NoteData) => void;
-};
+  onSubmit: (data: NoteData) => void
+}
 
 export default function NoteForm({ onSubmit }: NoteFormProps) {
-  const titleRef = React.useRef<HTMLInputElement>(null);
-  const markdownRef = React.useRef<HTMLTextAreaElement>(null);
-  const [selectedTags, setSelectedTags] = React.useState<Tag[]>([]);
+  const titleRef = React.useRef<HTMLInputElement>(null)
+  const markdownRef = React.useRef<HTMLTextAreaElement>(null)
+  const [selectedTags, setSelectedTags] = React.useState<Tag[]>([])
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+    event.preventDefault()
 
     onSubmit({
       title: titleRef.current!.value,
       markdown: markdownRef.current!.value,
       tags: [],
-    });
+    })
   }
 
   return (
@@ -38,14 +38,14 @@ export default function NoteForm({ onSubmit }: NoteFormProps) {
               <Form.Label>Tags</Form.Label>
               <CreatableReactSelect
                 value={selectedTags.map((tag) => {
-                  return { value: tag.id, label: tag.label };
+                  return { value: tag.id, label: tag.label }
                 })}
                 onChange={(tags) => {
                   setSelectedTags(
                     tags.map((tag) => {
-                      return { id: tag.value, label: tag.label };
+                      return { id: tag.value, label: tag.label }
                     })
-                  );
+                  )
                 }}
                 isMulti
               />
@@ -69,5 +69,5 @@ export default function NoteForm({ onSubmit }: NoteFormProps) {
         </Stack>
       </Stack>
     </Form>
-  );
+  )
 }
