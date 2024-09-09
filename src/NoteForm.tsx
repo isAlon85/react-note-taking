@@ -28,13 +28,13 @@ export default function NoteForm({ onSubmit }: NoteFormProps) {
       <Stack gap={4} onSubmit={handleSubmit}>
         <Row>
           <Col>
-            <Form.Group className="mb-3" controlId="title">
+            <Form.Group className='mb-3' controlId='title'>
               <Form.Label>Title</Form.Label>
-              <Form.Control ref={titleRef} required type="text" placeholder="Enter title" />
+              <Form.Control ref={titleRef} required type='text' placeholder='Enter title' />
             </Form.Group>
           </Col>
           <Col>
-            <Form.Group className="mb-3" controlId="title">
+            <Form.Group className='mb-3' controlId='title'>
               <Form.Label>Tags</Form.Label>
               <CreatableReactSelect
                 value={selectedTags.map((tag) => {
@@ -52,17 +52,17 @@ export default function NoteForm({ onSubmit }: NoteFormProps) {
             </Form.Group>
           </Col>
         </Row>
-        <Form.Group className="mb-3" controlId="markdown">
+        <Form.Group className='mb-3' controlId='markdown'>
           <Form.Label>Body</Form.Label>
-          <Form.Control ref={markdownRef} required as="textarea" />
+          <Form.Control ref={markdownRef} required as='textarea' />
         </Form.Group>
-        <Stack direction="horizontal" gap={2} className="justify-content-end">
-          <Button variant="primary" type="submit">
+        <Stack direction='horizontal' gap={2} className='justify-content-end'>
+          <Button variant='primary' type='submit'>
             {' '}
             Save{' '}
           </Button>
-          <Link to="/notes">
-            <Button variant="outline-secondary" type="button">
+          <Link to='/notes'>
+            <Button variant='outline-secondary' type='button'>
               Cancel
             </Button>
           </Link>
