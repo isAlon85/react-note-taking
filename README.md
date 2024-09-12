@@ -1,50 +1,51 @@
-# React + TypeScript + Vite
+# React Note Taking App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación de toma de notas construida con React y TypeScript.
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Esta aplicación permite a los usuarios crear, editar y eliminar notas. Las notas pueden tener etiquetas para una mejor organización.
 
-## Expanding the ESLint configuration
+## Estructura del Proyecto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- `src/`
+  - `App.tsx`: El componente principal de la aplicación que define las rutas y la estructura general.
+  - `NoteList.tsx`: Componente que muestra una lista de notas.
+  - `NewNote.tsx`: Componente para crear una nueva nota.
+  - `EditNote.tsx`: Componente para editar una nota existente.
+  - `NoteLayout.tsx`: Componente que define el diseño de una nota individual.
+  - `Note.tsx`: Componente que muestra el contenido de una nota individual.
+  - `NoteCard.tsx`: Componente que muestra una tarjeta de nota individual.
+  - `EditTagModal.tsx`: Componente modal para editar etiquetas.
+  - `index.tsx`: Punto de entrada de la aplicación.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clona el repositorio:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+```bash
+git clone https://github.com/tu-usuario/react-note-taking.git
+cd react-note-taking
+2. Instala las dependencias:
+npm install
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Para ejecutar la aplicación en modo de desarrollo:
+npm run dev
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+La aplicación estará disponible en http://localhost:5173
+
+Scripts Disponibles
+npm run dev: Inicia la aplicación en modo de desarrollo
+
+Contribución
+Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+
+Haz un fork del repositorio.
+Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
+Realiza tus cambios y haz commit (git commit -am 'Añadir nueva funcionalidad').
+Empuja la rama (git push origin feature/nueva-funcionalidad).
+Abre un Pull Request.
+
+Licencia
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 ```
