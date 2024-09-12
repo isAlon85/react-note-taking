@@ -96,7 +96,7 @@ function NoteCard({ id, title, tags }: SimplifiedNote): JSX.Element {
   return (
     <Card
       as={Link}
-      to={`/$${id}`}
+      to={`/${id}`}
       className={`h-100 text-reset text-decoration-none ${styles.card}`}
     >
       <Card.Body>
