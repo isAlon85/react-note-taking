@@ -1,9 +1,22 @@
 import React from 'react'
+import { Note } from './App'
+import { Navigate, Outlet, useOutletContext, useParams } from 'react-router-dom'
 
-export default function NoteLayout(): JSX.Element {
-  return (
-    <div style={{ backgroundColor: '#f2f2f2', padding: '20px' }}>
-      <h1>Note Layout</h1>
-    </div>
-  )
+type NoteLayoutProps = {
+  notes: Note[]
+}
+
+export default function NoteLayout({ notes }: NoteLayoutProps): JSX.Element {
+  const { id } = useParams()
+  const note = notes.find((note) => note.id === id)
+
+  if (note == null) {
+    return <Navigate to='/' replace />
+  }
+
+  return <Outlet context={note} />
+}
+
+export function useNote() {
+  return useOutletContext<Note>()
 }
