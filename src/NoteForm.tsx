@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { Button, Col, Form, Row, Stack } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'

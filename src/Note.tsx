@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-unused-vars */
 import { useNote } from './NoteLayout'
 import { Badge, Button, Col, Row, Stack } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'

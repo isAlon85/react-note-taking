@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-unused-vars */
 import NoteForm from './NoteForm'
 import { NoteData, Tag } from './App'
 

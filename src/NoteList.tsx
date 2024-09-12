@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-unused-vars */
 import React, { useMemo } from 'react'
 import { Row, Col, Stack, Button, Form, Card, Badge, Modal } from 'react-bootstrap'
 import { Link } from 'react-router-dom'

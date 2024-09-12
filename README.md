@@ -22,12 +22,11 @@ Esta aplicación permite a los usuarios crear, editar y eliminar notas. Las nota
 ## Instalación
 
 1. Clona el repositorio:
+   git clone https://github.com/tu-usuario/react-note-taking.git
+   cd react-note-taking
 
-```bash
-git clone https://github.com/tu-usuario/react-note-taking.git
-cd react-note-taking
 2. Instala las dependencias:
-npm install
+   npm install
 
 Para ejecutar la aplicación en modo de desarrollo:
 npm run dev
@@ -48,4 +47,7 @@ Abre un Pull Request.
 
 Licencia
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+```
+
 ```

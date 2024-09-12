@@ -1,4 +1,6 @@
-import React, { useMemo } from 'react' // Add this line to import React module
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-unused-vars */
+import { useMemo } from 'react' // Add this line to import React module
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container } from 'react-bootstrap'
 import { Navigate, Route, Routes } from 'react-router-dom'

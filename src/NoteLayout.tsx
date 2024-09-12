@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-unused-vars */
 import { Note } from './App'
 import { Navigate, Outlet, useOutletContext, useParams } from 'react-router-dom'
 
